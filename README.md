@@ -7,7 +7,7 @@
 git clone https://github.com/HamidiMehdi/opper-api.git
 
 # Se rendre dans le dossier du projet
-cd api-opper
+cd opper-api
 
 # Build l'image perso de php apache
 docker-compose build
