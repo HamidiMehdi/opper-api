@@ -18,6 +18,12 @@ docker-compose up -d
 # Télécharger les lib
 composer install
 
+# Supprimer la bdd si elle existe
+docker-compose exec web php bin/console doctrine:database:drop --if-exists --force
+
+# Creer la bdd
+docker-compose exec web php bin/console doctrine:database:create
+
 # Lancer les migrations
 docker-compose exec web php bin/console doctrine:migration:migrate
 
